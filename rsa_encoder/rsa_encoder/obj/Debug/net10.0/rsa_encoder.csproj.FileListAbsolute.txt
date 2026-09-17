@@ -1,0 +1,15 @@
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\bin\Debug\net10.0\rsa_encoder.exe
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\bin\Debug\net10.0\rsa_encoder.deps.json
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\bin\Debug\net10.0\rsa_encoder.runtimeconfig.json
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\bin\Debug\net10.0\rsa_encoder.dll
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\bin\Debug\net10.0\rsa_encoder.pdb
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.AssemblyInfoInputs.cache
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.AssemblyInfo.cs
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.csproj.CoreCompileInputs.cache
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.sourcelink.json
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.dll
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\refint\rsa_encoder.dll
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.pdb
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\rsa_encoder.genruntimeconfig.cache
+C:\Users\EUTK\Desktop\projekt\rsa_encoder\rsa_encoder\obj\Debug\net10.0\ref\rsa_encoder.dll
