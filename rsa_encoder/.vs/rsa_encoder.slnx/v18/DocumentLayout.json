@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,10 +33,6 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnitTest1.cs",
@@ -44,7 +40,7 @@
               "RelativeDocumentMoniker": "testySolvera\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\testySolvera\\UnitTest1.cs",
               "RelativeToolTip": "testySolvera\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T16:52:50.517Z",
               "EditorCaption": ""
@@ -57,7 +53,7 @@
               "RelativeDocumentMoniker": "rsa_encoder\\Program.cs",
               "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\Program.cs",
               "RelativeToolTip": "rsa_encoder\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wBAAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAswHIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T15:04:11.476Z",
               "EditorCaption": ""

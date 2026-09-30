@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rsa_encoder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02ded330bcbf80c643597fc794115d3e3cc346f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e296e49e62b7a65dca28d5f07d7cf86c97700f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("rsa_encoder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rsa_encoder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

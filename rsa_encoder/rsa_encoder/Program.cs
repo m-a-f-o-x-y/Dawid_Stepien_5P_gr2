@@ -112,7 +112,7 @@ public class Program
                     /
                     (2 * a);
    
-                float _solutionB = _solutionA - (float)Math.Sqrt(delta) / a; // redukujemy obliczenia poprzez wyliczenie
+                float _solutionB = _solutionA - MathF.Sqrt(delta) / a; // redukujemy obliczenia poprzez wyliczenie
                                                            // różnicy rozwiązań
                                                            // tj. x2 = x1 - (sqrt(delta) / a)
                                                            // można łatwo wyprowadzić, obliczając ogólnioną

@@ -393,6 +393,16 @@
         "build": {
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "rsa_encoder/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/rsa_encoder.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/rsa_encoder.dll": {}
+        }
       }
     }
   },
@@ -903,12 +913,18 @@
         "xunit.runner.visualstudio.3.1.4.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "rsa_encoder/1.0.0": {
+      "type": "project",
+      "path": "../rsa_encoder/rsa_encoder.csproj",
+      "msbuildProject": "../rsa_encoder/rsa_encoder.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
+      "rsa_encoder >= 1.0.0",
       "xunit >= 2.9.3",
       "xunit.runner.visualstudio >= 3.1.4"
     ]
@@ -946,7 +962,11 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\rsa_encoder.csproj": {
+              "projectPath": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\rsa_encoder.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
