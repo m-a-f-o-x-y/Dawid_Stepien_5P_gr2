@@ -34,9 +34,59 @@ namespace testySolvera
         }
 
         [Fact]
-        public void jednoRozwFnKwadratowej()
+        public void RozwiazaniaFnKwadratowej()
         {
+            LinearFunction l1 = new LinearFunction(1 / 2, 1);
+            QuadraticFunction q1 = new QuadraticFunction(2, 5, 1);
 
+            (float?, float?) result = l1.Intersection(q1);
+
+            Assert.Equal(result, (-1.6403882032022f, -0.6096117967978f));
+        }
+
+        [Fact]
+        public void najwiekszyWspolRownyZero()
+        {
+            bool error = false;
+            try
+            {
+                QuadraticFunction q1 = new QuadraticFunction(0, 2, 2);
+            }
+            catch (Exception)
+            {
+                error = true;
+            }
+
+            Assert.True(error);
+            
+        }
+
+        [Fact]
+        public void zwrocPoprawykat()
+        {
+            LinearFunction l1 = new LinearFunction(-1f/4f, 3);
+
+            float result = l1.angle();
+
+            Assert.Equal(result, 104.0362434679265f);
+        }
+
+        [Fact]
+        public void nieProstopadle()
+        {
+            LinearFunction l1 = new LinearFunction(2, 3);
+            LinearFunction l2 = new LinearFunction(1 / 17, 3);
+
+            Assert.False(l1.isPerpendicularTo(l2));
+        }
+
+        [Fact]
+        public void Prostopadle()
+        {
+            LinearFunction l1 = new LinearFunction(2f, 3f);
+            LinearFunction l2 = new LinearFunction(-1f/2f, 3f);
+
+            Assert.True(l1.isPerpendicularTo(l2));
         }
 
     }

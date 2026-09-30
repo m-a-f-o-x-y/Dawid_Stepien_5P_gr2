@@ -7,11 +7,16 @@
     Tworzę 2 klasy potomne, które przez konstruktory przyjmują 
     współczynniki do samych siebie.
 
+    Działają na liczbach zmiennoprzecinkowych pojedynczej precyzji (float'y) 
+    w celu szybszego obliczania
+
     Szczegóły przy linijkach kodu...
  */
 public class Program
-{ 
+{
     // Klasa bazowa tych funkcji
+
+    const float deg_to_radian = 180.0f / MathF.PI;
     public class Function
     {
         virtual public float Calc(float x) { return 0.0f; }
@@ -33,6 +38,22 @@ public class Program
         public float Calc(float x)
         {
             return a * x + b;
+        }
+
+        public bool isPerpendicularTo(LinearFunction l2) {
+            return (a * l2.a) == -1;
+        }
+
+        public float angle()
+        {
+            float rad = MathF.Atan(this.a);
+            float res = rad * deg_to_radian;
+            if (res < 0){
+                res = -res;
+                res += 90.0f;
+               
+            }
+            return res;
         }
 
         public float? Intersection(LinearFunction _funcB)
@@ -125,9 +146,9 @@ public class Program
 
     public static void Main()
     {
-        LinearFunction l1 = new LinearFunction(3, 2);
-        QuadraticFunction q1 = new QuadraticFunction(-0.1f, 6, 1);
+        LinearFunction l1 = new LinearFunction(-(1f / 4f), 3);
+        float result = l1.angle();
 
-        Console.WriteLine(l1.Intersection(q1));
+        Console.WriteLine(result);
     }
 }
