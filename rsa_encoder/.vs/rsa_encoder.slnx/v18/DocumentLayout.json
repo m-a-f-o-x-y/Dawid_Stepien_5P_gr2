@@ -1,13 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\",
+  "WorkspaceRootPath": "C:\\Users\\Uczen\\Dawid_Stepien_5P_gr2\\rsa_encoder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{791B6858-FC3E-4A2D-BB7E-54BD6011B025}|testySolvera\\testySolvera.csproj|c:\\users\\dawid\\source\\repos\\dawid_stepien_5p_gr2\\rsa_encoder\\testysolvera\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{791B6858-FC3E-4A2D-BB7E-54BD6011B025}|testySolvera\\testySolvera.csproj|solutionrelative:testysolvera\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE2F180C-3E38-49A6-7BD2-551ED32424A7}|rsa_encoder\\rsa_encoder.csproj|c:\\users\\dawid\\source\\repos\\dawid_stepien_5p_gr2\\rsa_encoder\\rsa_encoder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AE2F180C-3E38-49A6-7BD2-551ED32424A7}|rsa_encoder\\rsa_encoder.csproj|c:\\users\\uczen\\dawid_stepien_5p_gr2\\rsa_encoder\\rsa_encoder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE2F180C-3E38-49A6-7BD2-551ED32424A7}|rsa_encoder\\rsa_encoder.csproj|solutionrelative:rsa_encoder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -35,25 +31,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\testySolvera\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "testySolvera\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\testySolvera\\UnitTest1.cs",
-              "RelativeToolTip": "testySolvera\\UnitTest1.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwFYAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T16:52:50.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Uczen\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\Program.cs",
               "RelativeDocumentMoniker": "rsa_encoder\\Program.cs",
-              "ToolTip": "C:\\Users\\Dawid\\source\\repos\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\Program.cs",
+              "ToolTip": "C:\\Users\\Uczen\\Dawid_Stepien_5P_gr2\\rsa_encoder\\rsa_encoder\\Program.cs",
               "RelativeToolTip": "rsa_encoder\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAkwDcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAkwGYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-28T15:04:11.476Z",
               "EditorCaption": ""

@@ -17,7 +17,7 @@ public class Program
     // Klasa bazowa tych funkcji
 
     const float deg_to_radian = 180.0f / MathF.PI;
-    public class Function
+    public abstract class Function
     {
         virtual public float Calc(float x) { return 0.0f; }
     }
@@ -44,9 +44,14 @@ public class Program
             return (a * l2.a) == -1;
         }
 
-        public float angle()
+        public float angle(bool returnInRadians = false)
         {
             float rad = MathF.Atan(this.a);
+            if (returnInRadians)
+            {
+                return rad;
+            }
+
             float res = rad * deg_to_radian;
             if (res < 0){
                 res = -res;
@@ -85,7 +90,7 @@ public class Program
 
     public class QuadraticFunction : Function
     {
-        public float a, b, c;
+        public float a, b, c, p, q;
 
         public QuadraticFunction(float _a, float _b, float _c)
         {
@@ -97,6 +102,8 @@ public class Program
             a = _a;
             b = _b;
             c = _c;
+
+            (p, q) = vertex();
         }
         public float Calc(float x)
         {
@@ -127,28 +134,74 @@ public class Program
                 // ----------------
                 //       2a
                 //        ⬎
-                float _solutionA = (-_localB + 
+                float _solutionA = (-_localB +
                     (float)Math.Sqrt(delta)
                     )
                     /
                     (2 * a);
-   
+
                 float _solutionB = _solutionA - MathF.Sqrt(delta) / a; // redukujemy obliczenia poprzez wyliczenie
-                                                           // różnicy rozwiązań
-                                                           // tj. x2 = x1 - (sqrt(delta) / a)
-                                                           // można łatwo wyprowadzić, obliczając ogólnioną
-                                                           // różnicę rozwiązań funkcji kwadratowej
+                                                                       // różnicy rozwiązań
+                                                                       // tj. x2 = x1 - (sqrt(delta) / a)
+                                                                       // można łatwo wyprowadzić, obliczając ogólnioną
+                                                                       // różnicę rozwiązań funkcji kwadratowej
 
                 return (_solutionA, _solutionB); // 2 miejsca zerowe w krotce
             }
         }
-    }
 
+        public (float?, float?) Intersection(QuadraticFunction _funcB)
+        {
+            float _localA = (a - _funcB.a), _localB = (b - _funcB.b), _localC = (c - _funcB.c);
+
+            float delta = (_localB * _localB) - 4 * _localA * _localC;
+
+            if (delta < 0)
+            {
+                return (null, null); // nie ma rozwiązań (przynajmniej w zb. liczb rzeczywistych)
+            }
+            else if (delta == 0)
+            {
+                float calcValue = -_localB / (2 * _localA); // x0 = -b / 2a
+                return (calcValue, null);
+            }
+            else
+            {
+                //   -b ± √delta
+                // ----------------
+                //       2a
+                //        ⬎
+                float _solutionA = (-_localB +
+                    (float)Math.Sqrt(delta)
+                    )
+                    /
+                    (2 * _localA);
+
+                float _solutionB = _solutionA - MathF.Sqrt(delta) / _localA; // redukujemy obliczenia poprzez wyliczenie
+                                                                             // różnicy rozwiązań
+                                                                             // tj. x2 = x1 - (sqrt(delta) / a)
+                                                                             // można łatwo wyprowadzić, obliczając ogólnioną
+                                                                             // różnicę rozwiązań funkcji kwadratowej
+
+                return (_solutionA, _solutionB); // 2 miejsca zerowe w krotce
+
+            }
+        }
+
+        public (float, float) vertex()
+        {
+            float p, q;
+            p = -b / 2 * a;
+            q = Calc(p);
+
+            return (p, q);
+        }
+    }
     public static void Main()
     {
-        LinearFunction l1 = new LinearFunction(-(1f / 4f), 3);
-        float result = l1.angle();
+            QuadraticFunction q1 = new QuadraticFunction(1, 7, 3);
+            QuadraticFunction q2 = new QuadraticFunction(-1, -11, 9);
 
-        Console.WriteLine(result);
+        Console.WriteLine(q1.Intersection(q2));
     }
 }
