@@ -1,0 +1,2 @@
+**Testy integracyjne** to inaczej testy sprawdzające, czy komponenty składające się na program/aplikację prowadzą do poprawnych wyników. Na przykład można przetestować, czy zewnętrzne API (jak backend, komercyjne z danymi)
+zwraca pożądane dane w pożądanym formacie (np. csv, json, plaintext), zamiast błędów. Można przecież przypadkowo wysłać zapytanie, na coś, co na serwerze nie istnieje.
