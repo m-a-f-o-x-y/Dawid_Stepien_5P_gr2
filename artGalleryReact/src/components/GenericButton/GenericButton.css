@@ -1,0 +1,21 @@
+button
+{
+    height: 66px;
+    width: 66px;
+    background-color: black;
+    border-radius: 25px;
+    border: 2px aliceblue solid;
+    margin: 5px 0 5px 0;
+}
+
+button:hover{
+    background-color: aliceblue;
+    transition-duration: 0.2s;
+}
+
+button img{
+    background: none;
+    height: 33px;
+    width: 33px;
+    align-content: center;
+}

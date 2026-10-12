@@ -1,0 +1,32 @@
+aside{
+    padding: 30px 0 30px 0;
+
+    box-sizing: border-box;
+    width: 96px;
+    height: 100vh;
+    border-right: darkred 3px solid;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+}
+
+aside img{
+    width: 66px;
+    height: 66px;
+}
+
+
+#sidebar_buttons
+{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
