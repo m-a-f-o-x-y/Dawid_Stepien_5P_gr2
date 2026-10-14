@@ -9,7 +9,11 @@ describe (App, () => {
 
         expect(titleContent).not.toHaveLength(0);
     })
-    it("IsImageVisible", () => {
+    if ("GoodOutputFromRandomization", () => {
+        const {getByTestId, getByRole} = render(<App initial_id={24645}/>);
+        
+    })
+    it("isImageVisible", () => {
         const {getByTestId} = render(<App initial_id={24645}/>);
         const imgContent = getByTestId("image");
     })

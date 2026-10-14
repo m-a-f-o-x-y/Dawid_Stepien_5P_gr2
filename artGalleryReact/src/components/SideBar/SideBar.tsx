@@ -1,4 +1,4 @@
-import "./SideBar.css";
+//import "./SideBar.css";
 import GenericButton from "../GenericButton/GenericButton";
 import logo from "../../assets/logo.jpg";
 import arrowIcon from "../../assets/icons/svg/arrow.svg";
