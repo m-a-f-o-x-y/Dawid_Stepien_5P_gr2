@@ -6,7 +6,7 @@ aside{
     height: 100vh;
     border-right: darkred 3px solid;
     z-index: 3;
-    position: absolute;
+    position: sticky;
     left: 0;
     background-color: black;
     display: flex;

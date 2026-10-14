@@ -5,9 +5,8 @@ import arrowIcon from "../../assets/icons/svg/arrow.svg";
 import diceIcon from "../../assets/icons/svg/dice.svg";
 import { useState } from "react";
 
-function SideBar() {
+function SideBar({eventRandomize}) {
     let [isVisible, setVisibility] = useState(true);
-
 
         // zawsze wrapować w funkcję wszelkie funkcje zmieniające state'a!!!!!!!111!!!11!!
     return (
@@ -16,7 +15,7 @@ function SideBar() {
                 <img src={logo} alt="" />
                 <div id="sidebar_buttons">
                     <GenericButton imgSource={arrowIcon} clicked={() => {setVisibility(false)}}/> 
-                    <GenericButton imgSource={diceIcon} clicked={null}/>
+                    <GenericButton imgSource={diceIcon} clicked={eventRandomize}/>
                 </div>
                 
             </aside>
