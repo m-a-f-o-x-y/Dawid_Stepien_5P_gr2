@@ -2,10 +2,10 @@ import SideBar from "./components/SideBar/SideBar.tsx";
 import "./App.css";
 import { useEffect, useState, useRef } from "react";
 
-function App() {
+function App({initial_id}) {
   let [currentArtworkData, setArtworkData] = useState({});
   let ImageID = useRef("");
-  let [ArtworkID, setArtworkID] = useState(24645);
+  let [ArtworkID, setArtworkID] = useState(initial_id);
   let [imagePointer, setImagePointer] = useState({});
 
   let HTTPheader = {
@@ -49,16 +49,18 @@ function App() {
     <>
       <div id="gallery_body">
         <SideBar eventRandomize={() => { setArtworkID((Math.round(Math.random() * 100000 + 1))) }} />
-        <img id="gallery_img" src={`https://www.artic.edu/iiif/2/${ImageID}/full/843,/0/default.png`} />
+        <img id="gallery_img" 
+        src={`https://www.artic.edu/iiif/2/${ImageID}/full/843,/0/default.png`} 
+        data-testid="image"/>
         <div id="gallery_content">
           <div id="gallery_layout">
             <div id="item_header">
-              <h2 id="item_title">{currentArtworkData.title}</h2>
+              <h2 id="item_title" data-testid="title">{currentArtworkData.title}</h2>
               <div id="item_year_wrapper">
                 <span id="item_year">{currentArtworkData.date_display}</span>
               </div>
             </div>
-            <p id="item_content"> {currentArtworkData.description}</p>
+            <p id="item_content" data-testid="description"> {currentArtworkData.description}</p>
           </div>
         </div>
       </div>
