@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1781874954 source:c:\users\egzamin\desktop\primes\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<climits>
+	<cmath>
+	<algorithm>
+	<queue>
+	<string>
+	<unordered_map>
+	<format>
+	<thread>
+	<mutex>
+	<chrono>
+
+1785846492 source:c:\users\dawid\desktop\primes\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<bitset>
+	<climits>
+	<cmath>
+	<algorithm>
+	<unordered_map>
+	<string>
+	<format>
+	<thread>
+	<mutex>
+	<chrono>
+
+1781270436 source:c:\users\sala 108\desktop\primes\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<climits>
+	<cmath>
+	<algorithm>
+	<thread>
+	<mutex>
+	<chrono>
+
