@@ -1,0 +1,2 @@
+**Testy systemowe** to testy sprawdzające całość aplikacji, jego integracji z API i pozostałymi komponentami. Stosuje się je w celu wykrycia luk w oprogramowaniu, sprawdzenia wydajności aplikacji, czy podatność na błędy czy niespójności z zewnętrznymi API.
+Na przykład można zastosować takie testy w przypadku tworzenia silnika gier, by móc sprawdzić pod koniec tworzenia programu spójność UI, funkcji matematycznych, integracji z popularnymi programami typu edytor grafiki 3D, czy poprawna obsługa typów danych grafiki 2D/3D, muzyki, audio-wideo itd.
