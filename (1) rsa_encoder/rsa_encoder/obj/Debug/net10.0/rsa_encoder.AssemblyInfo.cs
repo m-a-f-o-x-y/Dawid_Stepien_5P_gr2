@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rsa_encoder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab82f469a37e65fe2683a78069c0d7c2ae2f5646")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+341dcb89ffb72a279b646c2a2a2af1d6c4509ce9")]
 [assembly: System.Reflection.AssemblyProductAttribute("rsa_encoder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rsa_encoder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

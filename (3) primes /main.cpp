@@ -13,7 +13,7 @@
 
 #include <chrono>
 
-#define subSieveLen 100000
+#define subSieveLen 50000
 
 //
 // typedefs
@@ -59,8 +59,6 @@ static std::chrono::time_point<std::chrono::high_resolution_clock> buffer_start,
 // Containers
 static std::vector<ulong> primes = {}, dictionary = {};
 static std::vector<std::thread> threads; // array for threads
-
-//static std::unordered_map<ulong, std::bitset<1000>*> masks;
 
 //
 // Special mutex for synchronous append
@@ -129,6 +127,10 @@ inline ulong firstOfMult(ulong A, ulong mul)
 
 std::pair<ulong*, ulong> erastoSieve(ulong _begin, ulong chunkSize)
 {
+    if (_begin % 2 == 0)
+    {
+        _begin++;
+    }
     ulong vector_size = piX(_begin+(chunkSize/2)) - piX(_begin); // reserve instead of constantly reallocating
     ulong* primes_buf;
     ulong foundCount = 0;
@@ -145,10 +147,19 @@ std::pair<ulong*, ulong> erastoSieve(ulong _begin, ulong chunkSize)
     uint divisor_id = 1;
     ulong divisor = 3, divisorSquare = 9;
     uint subSieve = 0;
+    ulong i = 0;
 
     while (divisorSquare <= (_begin + chunkSize) )
     {
-        for (ulong i = firstOfMult(_begin + 1, divisor); i < chunkSize/2;)
+        if (divisorSquare < _begin)
+        {
+            i = firstOfMult(_begin, divisor);       
+        }
+        else{
+            i = (divisorSquare - _begin) / 2; 
+        }
+
+        for (; i < chunkSize/2;) // seek first of mult
         {
             for (; i < (subSieve+1)*subSieveLen; i += divisor)
             {
@@ -170,7 +181,7 @@ std::pair<ulong*, ulong> erastoSieve(ulong _begin, ulong chunkSize)
                 foundCount++;
                 if (ReturnPrimes)
                 {
-                    primes_buf[foundCount++] = _begin + 1 + ( 2 * i );
+                    primes_buf[foundCount++] = _begin + ( 2 * i );
                 }
 
             }
