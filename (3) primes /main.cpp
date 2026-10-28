@@ -178,7 +178,6 @@ std::pair<ulong*, ulong> erastoSieve(ulong _begin, ulong chunkSize)
         for (uint j = 0; j < subSieveLen; j++){
             if (!sieve[i][j])
             {
-                foundCount++;
                 if (ReturnPrimes)
                 {
                     primes_buf[foundCount++] = _begin + ( 2 * i );
