@@ -2,10 +2,7 @@
 #include <vector>
 #include <fstream>
 #include <bitset>
-#include <climits>
 #include <cmath>
-#include <algorithm>
-#include <unordered_map>
 #include <format>
 
 #include <thread>
@@ -32,7 +29,7 @@ void writeBuffer();
 //
 // Tweaks
 static bool
-ReturnPrimes = false, // tweaking it on, reduces the speed of execution
+ReturnPrimes = true, // tweaking it on, reduces the speed of execution
 FromScratch = false, // use dictionary
 WithVerification = false,
 PreSortBuffer = false,
@@ -41,7 +38,7 @@ Sieving = true;
 
 //
 // calc variables
-static ulong maxNumber = 1e9, numbersDone = 0;
+static ulong maxNumber = 1e8, numbersDone = 0;
 
 static const ulong bufferSize = 1e8;
 static ulong chunkSize = 1e6;
@@ -67,7 +64,7 @@ static std::mutex primesMutex;
 inline ulong
 piX(ulong x)
 {
-    return (2.2 * x) / std::log(x); // std::log(x) => ln, not log10!
+    return (2.0 * x) / std::log(x); // std::log(x) => ln, not log10!
 }
 
 // Function that seeks primes using previously generated primes
@@ -114,12 +111,13 @@ is_prime_simpler(ulong a)
 inline ulong firstOfMult(ulong A, ulong mul)
 {
     if (A % mul == 0) return 0;
+    ulong index = 0;
 
-    ulong inv_mod = mul - (A % mul),
-    a = A;
-    A += inv_mod;
+    ulong a = A;
 
-    if (A % 2 == 0) A += mul;
+    A += (mul - (A % mul));
+
+    if (A & 1 == 0) A += mul;
 
     return (A - a)/2;
 
@@ -151,21 +149,14 @@ std::pair<ulong*, ulong> erastoSieve(ulong _begin, ulong chunkSize)
 
     while (divisorSquare <= (_begin + chunkSize) )
     {
-        if (divisorSquare < _begin)
-        {
-            i = firstOfMult(_begin, divisor);       
-        }
-        else{
-            i = (divisorSquare - _begin) / 2; 
-        }
+        i = firstOfMult(_begin, divisor);
 
         for (; i < chunkSize/2;) // seek first of mult
         {
             for (; i < (subSieve+1)*subSieveLen; i += divisor)
             {
-                 sieve[subSieve].set(i % subSieveLen);
+                 sieve[subSieve++].set(i % subSieveLen);
             }
-            subSieve++;
         }
 
         divisor = dictionary[++divisor_id];
@@ -178,6 +169,7 @@ std::pair<ulong*, ulong> erastoSieve(ulong _begin, ulong chunkSize)
         for (uint j = 0; j < subSieveLen; j++){
             if (!sieve[i][j])
             {
+                foundCount++;
                 if (ReturnPrimes)
                 {
                     primes_buf[foundCount++] = _begin + ( 2 * i );
