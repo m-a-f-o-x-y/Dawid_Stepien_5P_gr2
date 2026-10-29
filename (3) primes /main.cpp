@@ -29,16 +29,16 @@ void writeBuffer();
 //
 // Tweaks
 static bool
-ReturnPrimes = true, // tweaking it on, reduces the speed of execution
+ReturnPrimes = false, // tweaking it on, reduces the speed of execution
 FromScratch = false, // use dictionary
 WithVerification = false,
 PreSortBuffer = false,
-BinaryOutput = true,
+BinaryOutput = false,
 Sieving = true;
 
 //
 // calc variables
-static ulong maxNumber = 1e8, numbersDone = 0;
+static ulong maxNumber = 1e9, numbersDone = 0;
 
 static const ulong bufferSize = 1e8;
 static ulong chunkSize = 1e6;
@@ -64,7 +64,7 @@ static std::mutex primesMutex;
 inline ulong
 piX(ulong x)
 {
-    return (2.0 * x) / std::log(x); // std::log(x) => ln, not log10!
+    return (2.3 * x) / std::log(x); // std::log(x) => ln, not log10!
 }
 
 // Function that seeks primes using previously generated primes
@@ -117,7 +117,7 @@ inline ulong firstOfMult(ulong A, ulong mul)
 
     A += (mul - (A % mul));
 
-    if (A & 1 == 0) A += mul;
+    if (A % 2 == 0) A += mul;
 
     return (A - a)/2;
 
