@@ -19,7 +19,6 @@
 #include <thread>
 #include <mutex>
 
-#define subSieveLength 1000000
-#define DOUBLEsubSieveLength (subSieveLength * 2)
+
 
 #endif // PRIMESEEK_HEAD

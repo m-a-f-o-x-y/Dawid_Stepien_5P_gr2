@@ -6,6 +6,8 @@ u64 *dictionary = new u64[MAXdictPointer];
 
 u32 findLastLesserInSorted(u64 *list, u32 first, u32 last, u32 what)
 {
+  if (what == 3) { return list[0]; }
+
   u32 mid;
   last--;
 

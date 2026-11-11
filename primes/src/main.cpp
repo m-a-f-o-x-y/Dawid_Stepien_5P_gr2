@@ -2,9 +2,11 @@
 #include <unordered_map>
 #include <omp.h>
 #include <functional>
+#include <erastoSieve.h>
 
 // Flags
 bool simulatenousCPU = false;
+bool usingExternalDictionary = true;
 
 // Data
 u64 maxNumber = 1e9; // 1e9 is default
@@ -21,7 +23,7 @@ u64 extractNumberFromArgument(const char *argument)
   u32 preEnum = 1, postEnum = 1;
   const char *eOccurence;
   char *preEnumStr, *postEnumStr;
-  size_t eOccurenceIndex = 0;
+  size_t eOccurenceIndex = -1;
 
   u32 argumentLen = strlen(argument);
 
@@ -29,7 +31,11 @@ u64 extractNumberFromArgument(const char *argument)
   eOccurenceIndex = eOccurence - argument; // calculate index of 'e'
 
   // Allocate space for string buffers;
-  preEnumStr = new char[eOccurenceIndex];
+  if (eOccurenceIndex != -1 && eOccurence != 0)
+  {
+    preEnumStr = new char[eOccurenceIndex];
+  }
+  
   postEnumStr = new char[argumentLen - eOccurenceIndex];
 
   // split into two separate strings
@@ -69,7 +75,7 @@ int main(int argc, char *argv[])
         auto it = optionList[argv[argument_it]];
         it();
       }
-      catch (std::bad_function_call)
+      catch (std::bad_function_call) // i.e. if not specified
       {
         printf("Operation not specified: \"%s\"\n", argv[argument_it]);
       }
@@ -86,7 +92,13 @@ int main(int argc, char *argv[])
 #pragma omp parallel for reduction(+ : primeCounter) if (simulatenousCPU)
   for (u64 i = 7; i < maxNumber; i += DOUBLEsubSieveLength)
   {
-    primeCounter += sieveSegment(i);
+    if (i + DOUBLEsubSieveLength > maxNumber){
+      primeCounter += customSieveSegment(i, ((maxNumber - i) >> 1) );
+    }
+    else{
+      primeCounter += sieveSegment(i);
+      continue;
+    }
   }
 
   // Duration calculation
