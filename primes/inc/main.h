@@ -3,6 +3,8 @@
 
 // ISO C++ Includes
 #include <cstdio>
+#include <cstring>
+
 #include <bitset>
 #include <chrono>
 #include <algorithm>
@@ -15,6 +17,7 @@
 #include <primeDictionary.h>
 
 #include <thread>
+#include <mutex>
 
 #define subSieveLength 1000000
 #define DOUBLEsubSieveLength (subSieveLength * 2)
